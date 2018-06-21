@@ -1,5 +1,6 @@
 from selenium import webdriver
 
+
 # Driver path
 driver_path = '/usr/lib/chromium-browser/chromedriver'
 
