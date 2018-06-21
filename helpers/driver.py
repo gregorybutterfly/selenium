@@ -11,10 +11,13 @@ class GetDriver:
 
     def __init__(self, driver):
 
-        if driver.lower() is 'chrome':
-            self.driver = webdriver.Chrome(executable_path=driver_path, options=opts)
+        if driver.lower() == 'chrome':
+            self.driver = webdriver.Chrome(driver_path, options=opts)
         else:
-            print('Driver ' + driver + ' not found!')
+            self.driver = None
+
+    def get_driver(self):
+        return self.driver
 
     def maximize_window(self):
         """Maximizes browser window
